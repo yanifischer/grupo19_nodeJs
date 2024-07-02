@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 20px;
 }
-header {
+header, section {
     text-align:center;
     border: 1px solid #c45252;
     background: #9fed29;
@@ -15,12 +15,7 @@ section,aside {
     padding: 10px;
     -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
 }
-section {
-    float: left;
-    width: 50%;
-    background: #fafafa;
-    border: 1px solid #ccc;
-}
+
 aside {
     float: right;
     width: 45%;
