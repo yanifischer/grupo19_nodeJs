@@ -3,12 +3,12 @@ require('dotenv').config();
 const mySql = require('mysql2');
 const connection = mySql.createConnection(
     {
-        /*
-        host : 'localhost',
+        
+        /*host : 'localhost',
         user: 'root',
-        password: 'Loveisall77',
-        database: 'usuarios_vercel_prueba'
-        */
+        password: '070817',
+        database: 'grupo19_b'*/
+        
 
         host : process.env.DB_HOST,
         user: process.env.DB_USER,
@@ -35,7 +35,7 @@ const connection = mySql.createConnection(
 
 
 
-        connection.query('CREATE DATABASE IF NOT EXISTS grupo19', (err,results) =>
+        connection.query('CREATE DATABASE IF NOT EXISTS grupo19_b', (err,results) =>
         {
             if(err)
             {
@@ -51,7 +51,7 @@ const connection = mySql.createConnection(
 
 
 
-            connection.changeUser({database : 'grupo19'}, (err)=>
+            connection.changeUser({database : 'grupo19_b'}, (err)=>
             {
                 if(err)
                 {
@@ -106,30 +106,3 @@ const connection = mySql.createConnection(
 
 
 module.exports = connection;
-
-/*const mySql = require('mysql2');
-
-const connection = mySql.createConnection(
-    {
-        host : 'localhost',
-        user: 'root',
-        password : '070817',
-        database: 'grupo19'
-    });
-
-
-    connection.connect((err) => 
-    {
-        if(err)
-        {
-            console.error("ERROR conectando a la base de datos", err);
-            return;
-        }
-
-        console.log("Conectado EXITOSAMENTE a la base de datos");
-
-    });
-
-
-module.exports = connection;
-*/
