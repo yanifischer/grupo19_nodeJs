@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     crearUsuarioForm.addEventListener('submit', async (e) =>
     {  
+         console.log("Hola"); //test
         e.preventDefault();
         const formData = new FormData(crearUsuarioForm);
         const data = 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         });
 
         const result = await response.json();
+         console.log("Hola2"); //test
         alert("Cliente Registrado Con EXITO");
 
         crearUsuarioForm.reset();
