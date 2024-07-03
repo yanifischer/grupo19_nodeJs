@@ -94,7 +94,10 @@ document.addEventListener('DOMContentLoaded', () =>{
         const usuarios = await response.json();
         listaUsuarios.innerHTML='';//limpio la lista de usuarios
 
+        console.log("Hola"); //test
+
         usuarios.forEach(usuario => {
+             console.log("Hola"); //test
             const li = document.createElement('li');
             li.innerHTML = `
                 <span> ID: ${usuario.id}, Nombre: ${usuario.nombre}, Apellido: ${usuario.apellido}, Email: ${usuario.mail}, Cel:${usuario.cel}  </span>
@@ -109,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             listaUsuarios.appendChild(li);
         });
 
-
+ console.log("Hola"); //test
         document.querySelectorAll('.update').forEach(button => 
             {
                 button.addEventListener('click',(e) => 
