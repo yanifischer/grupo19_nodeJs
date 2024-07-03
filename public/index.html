@@ -9,8 +9,11 @@
     <header>
         <h1>Gestion De Clientes</h1>
     </header>
-      
-      <button id="mostrarCrearUsuarioFormBtn"> Crear Clientes</button>
+    
+
+    
+     
+      <button id="mostrarCrearUsuarioFormBtn">  Crear Clientes</button>
       
         <form id="crearUsuarioForm" class="hidden" enctype="multipart/form-data">
             <h2>Crear Clientes</h2>
@@ -27,7 +30,7 @@
             <label for="cel">Celular: </label>
             <input type="number" id="cel" name="cel">
 
-            <button type="submit"> Cargar</button>    
+            <button type="submit"> Crear Cliente</button>    
         </form>
 
 
@@ -46,23 +49,26 @@
             <input type="email" id="editMail" name="editMail" required>
 
             <label for="editCel">Celular: </label>
-            <input type="number" name="editCel" id="editCel">
+            <input type="number" name="editCel" id="editCel"  required>
 
             <button type="submit"> Actualizar Cliente </button>
 
         </form>
 
-
+   
 
         <!--Seccion para MOSTRAR TODOS LOS USUARIOS-->
-
-     <h2>Lista de clientes</h2>
-
-       
+<section>
+    <h2>Lista de clientes</h2>
+</section>
+        
         <button id="listarUsuariosBtn"> Listas Todos los Clientes</button>
         <ul id="listaUsuarios">
 
         </ul>
+
+  
+
 
         <script src="script.js"></script>
 </body>
