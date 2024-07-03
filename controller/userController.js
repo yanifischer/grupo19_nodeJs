@@ -54,7 +54,7 @@ const ActualizarUsuario = (req, res) =>{
     const {nombre,apellido,mail,cel} = req.body;
 
 
-    const sql = 'UPDATE tabla_usuarios_2 SET nombre = ?, apellido = ?, mail = ?, cel =? WHERE id = ?';
+    const sql = 'UPDATE clientes_2 SET nombre = ?, apellido = ?, mail = ?, cel =? WHERE id = ?';
     db.query(sql,[nombre,apellido,mail,cel,id], (err,result) =>
     {
         if(err) throw err;
@@ -72,7 +72,7 @@ const ActualizarUsuario = (req, res) =>{
 
 const BorrarUsuario = (req, res) =>{
     const {id} = req.params;
-    const sql  = 'DELETE FROM cliente_2 WHERE id= ?';
+    const sql  = 'DELETE FROM clientes_2 WHERE id= ?';
     db.query(sql,[id],(err,result) =>
     {
         if(err) throw err;
